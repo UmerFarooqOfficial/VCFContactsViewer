@@ -66,6 +66,14 @@ git clone https://github.com/UmerFarooqOfficial/VCFContactsViewer.git
 5. View file details and click View Contacts to display contacts.
 <br/>
 
+## Test VCF File
+
+A sample VCF file named [`test contacts.vcf`](test%20contacts.vcf) is included in this repository for testing and demonstration purposes.  
+
+You can use this file to quickly test the application without needing to provide your own VCF files.  
+It contains multiple dummy contacts with names, phone numbers, emails, and company information.
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).  <br/>
@@ -76,3 +84,4 @@ This project is licensed under the [MIT License](LICENSE).  <br/>
 ## Developed By
 
 **Umer Farooq** — [Portfolio](https://umerfarooqofficial.com)
+
