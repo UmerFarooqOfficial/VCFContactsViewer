@@ -1,0 +1,47 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:John Doe
+TEL;TYPE=CELL:+1 234 567 8901
+EMAIL:john.doe@example.com
+ORG:Apple Inc.;
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+FN:Sarah Khan
+TEL;TYPE=WORK:+92 300 1234567
+EMAIL:sarah.khan@softnexus.com
+ORG:SoftNexus Pvt Ltd;
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+FN:Ali Raza
+TEL;TYPE=CELL:555-1234
+EMAIL:ali.raza@example.com
+ORG:Creative Solutions;
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+FN:Emily Watson
+TEL;TYPE=HOME:+44 20 7946 0011
+EMAIL:emily.watson@londontech.co.uk
+ORG:London Tech;
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+FN:Michael Chen
+TEL;TYPE=CELL:+86 138 0000 1111
+EMAIL:michael.chen@dragonsoft.cn
+ORG:DragonSoft Ltd;
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+FN:Ahmed Sheikh
+TEL;TYPE=WORK:+971 50 3344556
+EMAIL:ahmed.sheikh@skyline.ae
+ORG:Skyline Technologies;
+END:VCARD
