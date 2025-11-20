@@ -28,6 +28,8 @@ namespace VCF_Contacts_Viewer
                     $"Size: {info.Length / 1024.0:F2} KB";
 
                 txtOutput.Clear();
+
+                toolStripLblStatus.Text = "File opened";
             }
         }
 
@@ -57,6 +59,8 @@ namespace VCF_Contacts_Viewer
             }
 
             txtOutput.Text = sb.ToString();
+
+            toolStripLblStatus.Text = $"File scanned successfully {_contacts.Count} contact(s) found";
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -66,6 +70,14 @@ namespace VCF_Contacts_Viewer
                 Application.Exit();
             }
             return;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            toolStripStatusLblVersion.Text = $"V {Application.ProductVersion}";
+            
+            int year = DateTime.Now.Year;
+            toolStripStatusLblCopyright.Text = $"Umer Farooq © 2025 - {year}";
         }
     }
 }

@@ -34,6 +34,11 @@
             btnView = new Button();
             txtOutput = new TextBox();
             btnExit = new Button();
+            ssMain = new StatusStrip();
+            toolStripLblStatus = new ToolStripStatusLabel();
+            toolStripStatusLblVersion = new ToolStripStatusLabel();
+            toolStripStatusLblCopyright = new ToolStripStatusLabel();
+            ssMain.SuspendLayout();
             SuspendLayout();
             // 
             // btnOpen
@@ -87,7 +92,7 @@
             txtOutput.Name = "txtOutput";
             txtOutput.ReadOnly = true;
             txtOutput.ScrollBars = ScrollBars.Vertical;
-            txtOutput.Size = new Size(958, 445);
+            txtOutput.Size = new Size(958, 426);
             txtOutput.TabIndex = 3;
             // 
             // btnExit
@@ -106,12 +111,53 @@
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += BtnExit_Click;
             // 
+            // ssMain
+            // 
+            ssMain.AutoSize = false;
+            ssMain.BackColor = SystemColors.WindowFrame;
+            ssMain.ImageScalingSize = new Size(20, 20);
+            ssMain.Items.AddRange(new ToolStripItem[] { toolStripLblStatus, toolStripStatusLblVersion, toolStripStatusLblCopyright });
+            ssMain.Location = new Point(0, 495);
+            ssMain.Name = "ssMain";
+            ssMain.Size = new Size(982, 28);
+            ssMain.SizingGrip = false;
+            ssMain.TabIndex = 5;
+            // 
+            // toolStripLblStatus
+            // 
+            toolStripLblStatus.Name = "toolStripLblStatus";
+            toolStripLblStatus.Size = new Size(788, 22);
+            toolStripLblStatus.Spring = true;
+            toolStripLblStatus.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLblVersion
+            // 
+            toolStripStatusLblVersion.BorderSides = ToolStripStatusLabelBorderSides.Left;
+            toolStripStatusLblVersion.BorderStyle = Border3DStyle.Sunken;
+            toolStripStatusLblVersion.Margin = new Padding(0, 4, 10, 2);
+            toolStripStatusLblVersion.Name = "toolStripStatusLblVersion";
+            toolStripStatusLblVersion.Padding = new Padding(10, 0, 0, 0);
+            toolStripStatusLblVersion.Size = new Size(71, 22);
+            toolStripStatusLblVersion.Text = "Version";
+            // 
+            // toolStripStatusLblCopyright
+            // 
+            toolStripStatusLblCopyright.BorderSides = ToolStripStatusLabelBorderSides.Left;
+            toolStripStatusLblCopyright.BorderStyle = Border3DStyle.Sunken;
+            toolStripStatusLblCopyright.Margin = new Padding(0, 4, 10, 2);
+            toolStripStatusLblCopyright.Name = "toolStripStatusLblCopyright";
+            toolStripStatusLblCopyright.Padding = new Padding(10, 0, 0, 0);
+            toolStripStatusLblCopyright.Size = new Size(88, 22);
+            toolStripStatusLblCopyright.Text = "Copyright";
+            toolStripStatusLblCopyright.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
             ClientSize = new Size(982, 523);
+            Controls.Add(ssMain);
             Controls.Add(btnExit);
             Controls.Add(txtOutput);
             Controls.Add(btnView);
@@ -123,7 +169,10 @@
             Name = "MainForm";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "VCF Viewer";
+            Text = "VCF Contacts Viewer";
+            Load += MainForm_Load;
+            ssMain.ResumeLayout(false);
+            ssMain.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -135,5 +184,9 @@
         private Button btnView;
         private TextBox txtOutput;
         private Button btnExit;
+        private StatusStrip ssMain;
+        private ToolStripStatusLabel toolStripLblStatus;
+        private ToolStripStatusLabel toolStripStatusLblVersion;
+        private ToolStripStatusLabel toolStripStatusLblCopyright;
     }
 }
